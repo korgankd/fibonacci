@@ -1,10 +1,13 @@
 var count;
 
 count = function (end) {
+	if( isNaN(end) ) {
+		end = 144;
+	}
 	var first = 1;
 	var second = 1;
 	var output = "";
-	for (var i = 0; second < end && i < end; i++) {
+	for (var i = 0; second <= end; i++) {
 		output += first + " ";
 		first = second + first;
 		output += second + " ";
